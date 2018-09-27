@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/data-bass/mitchProxy
-  - https://github.com/data-bass/mattproxy
-  - https://github.com/data-bass/MalcolmSpotifyProxy
-  - https://github.com/data-bass/RobProxy-BestProxy
+  - https://github.com/data-bass/PopularSongs
+  - https://github.com/data-bass/Header
+  - https://github.com/data-bass/RelatedArtists
+
 
 ## Table of Contents
 
