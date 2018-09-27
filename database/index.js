@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 // const db = require('../config/keys').mongoURI;
-const db = require('../config/keys').mongoMlab;
-
+// const db = require('../config/keys').mongoMlab;
 
 mongoose
-    .connect(db, { useNewUrlParser: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
-
+  .connect('mongodb://localhost/artists', { useNewUrlParser: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 const Schema = mongoose.Schema;
 
@@ -29,6 +27,8 @@ const ArtistSchema = new Schema({
     }]
   }]
 });
+
+// var Artist = mongoose.model('Artist', ArtistSchema);
 
 
 module.exports = Artists = mongoose.model('Artists', ArtistSchema);

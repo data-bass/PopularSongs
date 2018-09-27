@@ -23,13 +23,13 @@ class App extends React.Component {
   componentDidMount() {
     var randNum = Math.floor(Math.random() * 100) + 1;
     this.setState({artistID: randNum});
-   
-    //axios.get(`http://localhost:3003/artist/id`,{params: {id: randNum}})
-    axios.get(`/artist/` + randNum)
+    console.log(randNum)
+    // axios.get(`http://localhost:3003/artists/id`,{params: {id: randNum}})
+    axios.get(`/artists/` + randNum)
       .then(response => {
 
         let data = response.data;
-
+        console.log(data)
         this.setState({artistObj: data});
 
         this.setState({albumCovers: data.albums[0].img});
@@ -93,7 +93,7 @@ class App extends React.Component {
   }
 }
 
-//export default App;
+// export default App;
 export default CSSModules(App, styles);
 
 
